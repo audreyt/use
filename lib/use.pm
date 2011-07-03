@@ -67,11 +67,11 @@ use - Import several modules with a single use statement
 
 =head1 DESCRIPTION
 
-This module imports several modules at once into its caller's package.
+This module lets you import several modules at once.
 
-This is almost the same as the L<modules> module, except that C<caller>
-is properly set up so syntax-altering modules based on L<Devel::Declare>,
-L<Filter::Simple> or L<Module::Compile> can work corrcetly.
+This is almost the same as L<modules>, except that C<caller> is
+properly set up so syntax-altering modules based on L<Devel::Declare>,
+L<Filter::Simple> or L<Module::Compile> work correctly.
 
 =head1 SEE ALSO
 
