@@ -26,8 +26,19 @@ sub build_import {
         elsif (ref $arg eq 'HASH') {
             $use[-1] = { %{$use[-1]}, %$arg };
         }
-        elsif (is_lax($arg) and @use) {
-            $use[-1]{version} = $arg;
+        elsif (is_lax($arg)) {
+            if (@use) {
+                $use[-1]{version} = $arg;
+                next;
+            }
+
+            my $perl_version = version->parse($arg)->numify;
+            push @use, { name => $perl_version };
+            if ($perl_version >= 5.009003 and $perl_version < 6) {
+                my $sub_version = int(($perl_version - 5) * 1000);
+                push @use, { name => 'strict' };
+                push @use, { name => 'feature', args => [":5.$sub_version"] };
+            }
         }
         else {
             push @use, { name => $arg };
@@ -72,6 +83,10 @@ This module lets you import several modules at once.
 This is almost the same as L<modules>, except that C<caller> is
 properly set up so syntax-altering modules based on L<Devel::Declare>,
 L<Filter::Simple> or L<Module::Compile> work correctly.
+
+If a Perl version number larger than C<5.9.3> appears as the first argument,
+then it's automatically expanded just like a regular C<use VERSION> statement.
+For example, C<use use '5.12.0'> expands to C<use strict; use feature ':5.12'>.
 
 =head1 SEE ALSO
 

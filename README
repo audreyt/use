@@ -20,11 +20,16 @@ SYNOPSIS
         }
 
 DESCRIPTION
-    This module imports several modules at once into its caller's package.
+    This module lets you import several modules at once.
 
-    This is almost the same as the modules module, except that "caller" is
-    properly set up so syntax-altering modules based on Devel::Declare,
-    Filter::Simple or Module::Compile can work corrcetly.
+    This is almost the same as modules, except that "caller" is properly set
+    up so syntax-altering modules based on Devel::Declare, Filter::Simple or
+    Module::Compile work correctly.
+
+    If a Perl version number larger than 5.9.3 appears as the first
+    argument, then it's automatically expanded just like a regular "use
+    VERSION" statement. For example, "use use '5.12.0'" expands to "use
+    strict; use feature ':5.12'".
 
 SEE ALSO
     rig, modules
