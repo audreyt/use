@@ -2,7 +2,7 @@ package use;
 use strict;
 use warnings;
 use 5.008;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 use base 'rig::engine::base';
 use version 0.86 'is_lax';
 
@@ -58,6 +58,9 @@ __END__
 use - Import several modules with a single use statement
 
 =head1 SYNOPSIS
+
+    # Use several modules in command line:
+    % perl -Muse=CGI,DBI,PPI -e '...'
 
     # Import several modules at once
     use use qw[ strict warnings methods invoker ];

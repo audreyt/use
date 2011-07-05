@@ -4,6 +4,9 @@ use - Import several modules with a single use statement
 
 # SYNOPSIS
 
+    # Use several modules in command line:
+    % perl -Muse=CGI,DBI,PPI -e '...'
+
     # Import several modules at once
     use use qw[ strict warnings methods invoker ];
 
