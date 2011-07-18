@@ -1,3 +1,7 @@
+[Changes for 0.03 - Sun Jul 17 22:32:24 PDT 2011]
+
+* Uses perl5.pm instead of rig.pm
+
 [Changes for 0.01 - Sun Jul  3 10:29:46 CST 2011]
 
 * Initial release to CPAN.
