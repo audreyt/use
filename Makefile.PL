@@ -1,5 +1,2 @@
 #!/usr/bin/env perl
-use inc::Module::Package 'Au:dry 1';
-requires $_ for qw(
-    rig::engine::base
-);
+use inc::Module::Package 'Au:dry 0.01';
