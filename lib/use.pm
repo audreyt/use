@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use 5.008;
 our $VERSION = '0.03';
-use perl5 0.06 ();
+use perl5 0.07 ();
 use base 'perl5';
 use version 0.86 'is_lax';
 
@@ -76,7 +76,7 @@ For example, C<use use '5.12.0'> expands to C<use strict; use feature ':5.12'>.
 
 =head1 SEE ALSO
 
-L<rig>, L<modules>
+L<perl5>, L<modules>
 
 =head1 AUTHORS
 

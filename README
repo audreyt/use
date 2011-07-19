@@ -35,7 +35,7 @@ DESCRIPTION
     strict; use feature ':5.12'".
 
 SEE ALSO
-    rig, modules
+    perl5, modules
 
 AUTHORS
     唐鳳 <cpan@audreyt.org>

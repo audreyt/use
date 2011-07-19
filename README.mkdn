@@ -38,7 +38,7 @@ For example, `use use '5.12.0'` expands to `use strict; use feature ':5.12'`.
 
 # SEE ALSO
 
-[rig](http://search.cpan.org/perldoc?rig), [modules](http://search.cpan.org/perldoc?modules)
+[perl5](http://search.cpan.org/perldoc?perl5), [modules](http://search.cpan.org/perldoc?modules)
 
 # AUTHORS
 
