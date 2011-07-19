@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use 5.008;
 our $VERSION = '0.03';
-use perl5 0.07 ();
+use perl5 0.08 ();
 use base 'perl5';
 use version 0.86 'is_lax';
 
@@ -55,10 +55,10 @@ use - Import several modules with a single use statement
     use use '5.12.0', 'HTTP::Status' => '6.00' => [':constants'];
 
     # ...or in your own module, importing on behalf of its caller:
-    package perl5::foo;
+    package MY::Macro;
     sub import {
         use use;
-        local @_ = qw[ methods invoker ];
+        local @_ = qw[ Module1 Module2 ];
         goto &use::use;
     }
 
